@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de tu página</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pagina de encriptacion</h1>
+    </header>
+    <section>
+        <label for="modo-selector">Modo:</label>
+        <select id="modo-selector">
+            <option value="1">Encriptar</option>
+            <option value="2">Desencriptar</option>
+
+        </select>
+        <br>
+    
+
+        <label for="estilo-selector">Tipo de encriptacion:</label>
+        <select id="estilo-selector">
+            <option value="1">Franco Mason</option>
+            <option value="2">Susurros</option>
+            <option value="3">Barnus</option>
+
+        </select>
+        <br>
+    
+        <!-- Input del mes -->
+        <label for="mes" id="label-mes" style="display: none;">Mes:</label>
+        <input type="text" id="mes" class="input-hacker" placeholder="Mes" style="display: none;">
+        
+        <!-- Input del día -->
+        <label for="dia" id="label-dia" style="display: none;">Día:</label>
+        <input type="text" id="dia" class="input-hacker" placeholder="Día" style="display: none;">
+        
+        
+
+        <br>
+        <button id="boton-encriptar">Encriptar</button>
+        <br>
+        <br>
+
+        <label class="campo-texto-lable" for="campo-texto">Texto Desencriptado:</label>
+        <textarea id="campo-texto" placeholder="Escribe aquí..."></textarea>
+
+         <!-- Segundo textarea no editable -->
+    <label class="campo-texto-no-editable-lable" for="campo-texto-no-editable">Texto Encriptado:</label>
+    <textarea id="campo-texto-no-editable" placeholder="" readonly></textarea>
+    </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+    </html>

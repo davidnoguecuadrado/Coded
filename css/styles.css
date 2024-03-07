@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Pigpen Regular';
+    src: url('PigpenCipherRegular.otf') format('opentype');
+}
+.pigpen-text {
+    font-family: 'Pigpen Regular', sans-serif;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #00ff00;
+}
+
+header, nav, section, footer {
+    border: 1px solid #00ff00;
+    padding: 20px;
+    margin: 10px;
+}
+
+header h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+nav a {
+    color: #00ff00;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+section {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    clear: both;
+}
+
+/* Efecto parpadeo para el texto */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1, h2 {
+    animation: blink 1s infinite;
+}
+
+#contenido-principal {
+    background-color: #000;
+    color: #0f0;
+    padding: 20px;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0f0;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#contenido-principal h2 {
+    color: #0f0;
+    font-size: 24px;
+    border-bottom: 2px solid #0f0;
+    margin-bottom: 10px;
+}
+
+
+#estilo-selector {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px;
+    background-color: #000;
+    color: #0f0;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0f0;
+}
+
+#estilo-selector option {
+    background-color: #000;
+    color: #0f0;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#estilo-selector option:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+#modo-selector {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px;
+    background-color: #000;
+    color: #0f0;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0f0;
+}
+
+#modo-selector option {
+    background-color: #000;
+    color: #0f0;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#modo-selector option:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+#campo-texto {
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #0f0;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    outline: none; /* Quita el borde al recibir foco */
+    box-shadow: 0 0 10px #0f0; /* Añade un efecto de resplandor */
+    resize: vertical; /* Permite el redimensionamiento vertical */
+    min-height: 100px; /* Altura mínima */
+     /* Ocultar el scrollbar nativo */
+     scrollbar-width: thin;
+     scrollbar-color: #0f0 #000; /* Ancho y color del scrollbar */
+}
+
+#campo-texto::placeholder {
+    color: #0f0; /* Color del texto de marcador de posición */
+}
+
+#campo-texto:focus {
+    border-color: #0f0; /* Cambia el color del borde al recibir foco */
+    box-shadow: 0 0 10px #0f0, 0 0 10px #0f0 inset; /* Añade un efecto de resplandor y sombra interna */
+}
+
+
+
+/* Estilos para el scrollbar */
+#campo-texto::-webkit-scrollbar {
+    width: 12px;
+}
+
+#campo-texto::-webkit-scrollbar-track {
+    background-color: #000;
+}
+
+#campo-texto::-webkit-scrollbar-thumb {
+    background-color: #0f0;
+    border-radius: 10px;
+}
+
+#campo-texto-no-editable {
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #0f0;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 0 10px #0f0;
+    resize: vertical;
+    min-height: 100px;
+    /* Ocultar el scrollbar nativo */
+    scrollbar-width: thin;
+    scrollbar-color: #0f0 #000; /* Ancho y color del scrollbar */
+}
+
+
+/* Estilos para el scrollbar */
+#campo-texto-no-editable::-webkit-scrollbar {
+    width: 12px;
+}
+
+#campo-texto-no-editable::-webkit-scrollbar-track {
+    background-color: #000;
+}
+
+#campo-texto-no-editable::-webkit-scrollbar-thumb {
+    background-color: #0f0;
+    border-radius: 10px;
+}
+
+#boton-encriptar {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #000;
+    color: #0f0;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#boton-encriptar:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+.input-hacker {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #0f0;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 0 10px #0f0;
+    resize: vertical;
+    min-height: 30px; /* Altura mínima para los inputs */
+}
+
+.alert-hacker {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #000;
+    color: #0f0;
+    border: 2px solid #0f0;
+    border-radius: 10px;
+}
