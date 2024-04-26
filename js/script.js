@@ -62,7 +62,7 @@ function desencriptar(){
     else if(tipo == 2){
         if(verificarCamposObligatorios()){
             
-            texto=cifradoSusurros(texto);
+            texto=desCifradoSusurros(texto);
         }   
         else{
             mostrarAlertHacker("Rellena todos los datos como toca >:(");
@@ -83,7 +83,7 @@ function desencriptar(){
     // Ajustar la altura del segundo textarea
     $('#campo-texto-no-editable').css('height', 'auto'); // Restablece la altura
     $('#campo-texto-no-editable').css('height', $('#campo-texto-no-editable')[0].scrollHeight + 'px'); // Ajusta la altura al contenido     
-
+    convertirANormal();
 }
 
 
@@ -436,4 +436,35 @@ function separarDigitos(numero) {
 
 function esPar(numero) {
     return numero % 2 === 0;
+}
+
+function desCifradoSusurros(texto){
+    convertirAPigpen();
+    var mes = $('#mes').val();
+    var dia = $('#dia').val();
+    var mesSeparadio = separarDigitos(mes);
+    var diaSeparado =   separarDigitos(dia);
+    var cifrado = 0;
+    mesSeparadio.forEach(element => {
+        cifrado += element
+    });
+    diaSeparado.forEach(element => {
+        cifrado += element
+    });
+    if(cifrado == 26){
+        if(esPar(mes)){
+            cifrado == 25
+        }
+        else{
+            cifrado == 27
+        }
+    }
+
+    if(esPar(mes)){
+        texto=cesarCipher(texto,cifrado,"izquierda");
+    }
+    else{
+        texto=cesarCipher(texto,cifrado,"derecha");
+    }
+    return texto;
 }
