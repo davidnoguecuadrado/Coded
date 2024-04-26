@@ -39,9 +39,57 @@ $(document).ready(function() {
     });
 
     $('#boton-encriptar').click(function() {
-        encriptar();
+        var modo = $('#modo-selector').val();
+        if(modo == 1){
+            encriptar();
+        }
+        else{
+            desencriptar();
+        }
     });
 });
+
+
+function desencriptar(){
+
+    // Copiar el texto del primer textarea al segundo
+    var texto = $('#campo-texto').val();
+    var tipo = $('#estilo-selector').val();
+
+    if(tipo == 1){
+        convertirANormal();
+    }
+    else if(tipo == 2){
+        if(verificarCamposObligatorios()){
+            
+            texto=cifradoSusurros(texto);
+        }   
+        else{
+            mostrarAlertHacker("Rellena todos los datos como toca >:(");
+        }
+    }
+    else if(tipo == 3){
+        if(verificarCamposObligatorios()){
+            
+            texto=cifradoBarnus(texto);
+        }   
+        else{
+            mostrarAlertHacker("Rellena todos los datos como toca >:(");
+        }
+    }
+    
+    $('#campo-texto-no-editable').val(texto);
+    
+    // Ajustar la altura del segundo textarea
+    $('#campo-texto-no-editable').css('height', 'auto'); // Restablece la altura
+    $('#campo-texto-no-editable').css('height', $('#campo-texto-no-editable')[0].scrollHeight + 'px'); // Ajusta la altura al contenido     
+
+}
+
+
+function convertirANormal() {
+    $('#campo-texto-no-editable').removeClass("pigpen-text");
+}
 
 function encriptar(){
 
