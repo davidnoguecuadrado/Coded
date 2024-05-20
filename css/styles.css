@@ -6,243 +6,114 @@
     font-family: 'Pigpen Regular', sans-serif;
 }
 
-body {
-    font-family: 'Courier New', Courier, monospace;
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #00ff00;
+    box-sizing: border-box;
 }
 
-header, nav, section, footer {
-    border: 1px solid #00ff00;
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f5e6c4;
+    color: #362e2b;
+    background-image: url('https://www.example.com/path/to/medieval-parchment-background.jpg'); /* Fondo de pergamino medieval */
+    background-size: cover;
+    background-attachment: fixed;
     padding: 20px;
-    margin: 10px;
 }
 
-header h1 {
-    font-size: 36px;
+header {
+    background-color: #8b4513;
+    color: #fff;
+    padding: 20px;
     text-align: center;
+    border: 3px solid #362e2b;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px #000;
 }
 
-nav a {
-    color: #00ff00;
-    text-decoration: none;
-    margin: 0 15px;
+h1 {
+    font-size: 48px;
+    font-family: 'Old English Text MT', serif;
+    margin-bottom: 20px;
 }
 
 section {
-    text-align: center;
-}
-
-footer {
-    text-align: center;
-    font-style: italic;
-    clear: both;
-}
-
-/* Efecto parpadeo para el texto */
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-h1, h2 {
-    animation: blink 1s infinite;
-}
-
-#contenido-principal {
-    background-color: #000;
-    color: #0f0;
+    margin: 20px;
     padding: 20px;
-    border: 2px solid #0f0;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #0f0;
-    padding: 20px;
-    font-size: 18px;
-    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para mejorar legibilidad */
+    border: 2px solid #8b4513;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#contenido-principal h2 {
-    color: #0f0;
-    font-size: 24px;
-    border-bottom: 2px solid #0f0;
+label {
+    display: block;
     margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Old English Text MT', serif;
+    font-size: 24px;
 }
 
-
-#estilo-selector {
-    margin-top: 10px;
-    font-size: 16px;
-    padding: 5px;
-    background-color: #000;
-    color: #0f0;
-    border: 2px solid #0f0;
+select, input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #8b4513;
     border-radius: 5px;
-    box-shadow: 0 0 10px #0f0;
+    font-family: 'Old English Text MT', serif;
+    font-size: 18px;
+    background-color: #f5e6c4;
+    color: #362e2b;
 }
 
-#estilo-selector option {
-    background-color: #000;
-    color: #0f0;
-    font-size: 16px;
-    padding: 5px;
-}
-
-#estilo-selector option:hover {
-    background-color: #0f0;
-    color: #000;
-}
-
-#modo-selector {
-    margin-top: 10px;
-    font-size: 16px;
-    padding: 5px;
-    background-color: #000;
-    color: #0f0;
-    border: 2px solid #0f0;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #0f0;
-}
-
-#modo-selector option {
-    background-color: #000;
-    color: #0f0;
-    font-size: 16px;
-    padding: 5px;
-}
-
-#modo-selector option:hover {
-    background-color: #0f0;
-    color: #000;
-}
-
-#campo-texto {
-    margin-top: 10px;
-    padding: 8px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #000;
-    color: #0f0;
-    border: 2px solid #0f0;
-    border-radius: 5px;
-    outline: none; /* Quita el borde al recibir foco */
-    box-shadow: 0 0 10px #0f0; /* Añade un efecto de resplandor */
-    resize: vertical; /* Permite el redimensionamiento vertical */
-    min-height: 100px; /* Altura mínima */
-     /* Ocultar el scrollbar nativo */
-     scrollbar-width: thin;
-     scrollbar-color: #0f0 #000; /* Ancho y color del scrollbar */
-}
-
-#campo-texto::placeholder {
-    color: #0f0; /* Color del texto de marcador de posición */
-}
-
-#campo-texto:focus {
-    border-color: #0f0; /* Cambia el color del borde al recibir foco */
-    box-shadow: 0 0 10px #0f0, 0 0 10px #0f0 inset; /* Añade un efecto de resplandor y sombra interna */
-}
-
-
-
-/* Estilos para el scrollbar */
-#campo-texto::-webkit-scrollbar {
-    width: 12px;
-}
-
-#campo-texto::-webkit-scrollbar-track {
-    background-color: #000;
-}
-
-#campo-texto::-webkit-scrollbar-thumb {
-    background-color: #0f0;
-    border-radius: 10px;
-}
-
-#campo-texto-no-editable {
-    margin-top: 10px;
-    padding: 8px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #000;
-    color: #0f0;
-    border: 2px solid #0f0;
-    border-radius: 5px;
-    outline: none;
-    box-shadow: 0 0 10px #0f0;
-    resize: vertical;
-    min-height: 100px;
-    /* Ocultar el scrollbar nativo */
-    scrollbar-width: thin;
-    scrollbar-color: #0f0 #000; /* Ancho y color del scrollbar */
-}
-
-
-/* Estilos para el scrollbar */
-#campo-texto-no-editable::-webkit-scrollbar {
-    width: 12px;
-}
-
-#campo-texto-no-editable::-webkit-scrollbar-track {
-    background-color: #000;
-}
-
-#campo-texto-no-editable::-webkit-scrollbar-thumb {
-    background-color: #0f0;
-    border-radius: 10px;
-}
-
-#boton-encriptar {
-    margin-top: 10px;
-    padding: 8px 16px;
-    font-size: 16px;
-    background-color: #000;
-    color: #0f0;
-    border: 2px solid #0f0;
+button {
+    padding: 10px 20px;
+    background-color: #8b4513;
+    color: #fff;
+    border: 2px solid #362e2b;
     border-radius: 5px;
     cursor: pointer;
-    outline: none;
+    font-family: 'Old English Text MT', serif;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#boton-encriptar:hover {
-    background-color: #0f0;
-    color: #000;
+button:hover {
+    background-color: #654321;
+    transform: scale(1.05);
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+}
+
+.campo-texto-lable, .campo-texto-no-editable-lable {
+    font-weight: bold;
+    font-family: 'Old English Text MT', serif;
+    font-size: 24px;
+    margin-top: 20px;
 }
 
 .input-hacker {
-    margin-top: 5px;
-    padding: 8px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #000;
-    color: #0f0;
-    border: 2px solid #0f0;
-    border-radius: 5px;
-    outline: none;
-    box-shadow: 0 0 10px #0f0;
-    resize: vertical;
-    min-height: 30px; /* Altura mínima para los inputs */
+    display: inline-block;
+    width: 45%;
 }
 
-.alert-hacker {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #000;
-    color: #0f0;
-    border: 2px solid #0f0;
-    border-radius: 10px;
+option {
+    font-family: 'Old English Text MT', serif;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .input-hacker {
+        width: 100%;
+    }
+
+    header, section {
+        padding: 10px;
+    }
 }
