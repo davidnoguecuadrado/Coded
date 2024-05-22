@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Pigpen Regular';
-    src: url('PigpenCipherRegular.otf') format('opentype');
+    src: url('PigpenCipherRegular.ttf') format('opentype');
 }
 .pigpen-text {
     font-family: 'Pigpen Regular', sans-serif;

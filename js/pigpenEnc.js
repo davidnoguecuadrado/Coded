@@ -1,4 +1,6 @@
 function EncriptarAPigpen() {
+    var texto = $("#campo-texto").val();
+    $("#campo-texto-no-editable").val(texto);
     convertirAPigpen();
 }
 
