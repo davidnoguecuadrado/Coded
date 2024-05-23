@@ -53,6 +53,8 @@ $(document).ready(function() {
             $("#campo-texto-no-editable").val("")
             $('#campo-texto').removeClass("pigpen-text");
             $('#campo-texto-no-editable').addClass("pigpen-text");
+            $("#boton-encriptar").text("Encriptar")
+
         }
         else{
             $(".campo-texto-no-editable-lable").text("Texto Desencriptado:")
@@ -61,6 +63,8 @@ $(document).ready(function() {
             $("#campo-texto-no-editable").val("")
             $('#campo-texto-no-editable').removeClass("pigpen-text");
             $('#campo-texto').addClass("pigpen-text");
+            $("#boton-encriptar").text("Desencriptar")
+
         }
     });
 });
