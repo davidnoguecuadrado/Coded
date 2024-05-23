@@ -87,7 +87,7 @@ function desencriptar() {
         DesencriptarSusurros();
     }
     else if(estilo == 3){
-        DesencriptarTextoBarnus();
+        DesencriptarDeBarnus();
     }
 }
 
