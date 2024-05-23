@@ -26,6 +26,43 @@ $(document).ready(function() {
             $("#dia").show()
         }
     });
+
+    $("#estilo-selector").change(function(){
+        var estilo = $(this).val();
+        if(estilo == 1){
+            $("#label-mes").hide()
+            $("#mes").hide()
+            $("#label-dia").hide()
+            $("#dia").hide()
+        }
+        else{
+            $("#label-mes").show()
+            $("#mes").show()
+            $("#label-dia").show()
+            $("#dia").show()
+        }
+    });
+
+    $("#modo-selector").change(function(){
+        var modo = $(this).val();
+        console.log(modo)
+        if(modo == 1){
+            $(".campo-texto-lable").text("Texto Desencriptado:")
+            $(".campo-texto-no-editable-lable").text("Texto Encriptado:")
+            $("#campo-texto").val("")
+            $("#campo-texto-no-editable").val("")
+            $('#campo-texto').removeClass("pigpen-text");
+            $('#campo-texto-no-editable').addClass("pigpen-text");
+        }
+        else{
+            $(".campo-texto-no-editable-lable").text("Texto Desencriptado:")
+            $(".campo-texto-lable").text("Texto Encriptado:")
+            $("#campo-texto").val("")
+            $("#campo-texto-no-editable").val("")
+            $('#campo-texto-no-editable').removeClass("pigpen-text");
+            $('#campo-texto').addClass("pigpen-text");
+        }
+    });
 });
 
 
@@ -42,6 +79,16 @@ function encriptar() {
     }
 }
 function desencriptar() {
+    var estilo = $("#estilo-selector").val();
+    if(estilo == 1){
+        DesencriptadoAPigpen();  
+    }
+    else if(estilo == 2){
+        DesencriptarSusurros();
+    }
+    else if(estilo == 3){
+        DesencriptarTextoBarnus();
+    }
 }
 
 
